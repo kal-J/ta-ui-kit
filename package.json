@@ -1,0 +1,23 @@
+{
+  "name": "ta-ui-kit",
+  "version": "0.0.1",
+  "description": "True African UI kit",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kal-J/ta-ui-kit.git"
+  },
+  "keywords": [
+    "ui",
+    "design"
+  ],
+  "author": "kalujja",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kal-J/ta-ui-kit/issues"
+  },
+  "homepage": "https://github.com/kal-J/ta-ui-kit#readme"
+}
