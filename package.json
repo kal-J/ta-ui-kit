@@ -4,7 +4,7 @@
   "description": "True African UI kit",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"no test specified\" "
   },
   "repository": {
     "type": "git",
@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/kal-J/ta-ui-kit/issues"
   },
-  "homepage": "https://github.com/kal-J/ta-ui-kit#readme"
+  "homepage": "https://github.com/kal-J/ta-ui-kit#readme",
+  "dependencies": {
+    "np": "^7.6.3"
+  }
 }
