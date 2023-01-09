@@ -1,4 +1,6 @@
 import { applyPureReactInVue } from "veaury";
 import SideBar from "../components/SideBar";
 
-export default applyPureReactInVue(SideBar)
+const SideBar = applyPureReactInVue(SideBar);
+
+export { SideBar };
