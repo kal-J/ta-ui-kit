@@ -36,7 +36,8 @@
   "homepage": "https://github.com/kal-J/ta-ui-kit#readme",
   "dependencies": {
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "veaury": "^2.3.11"
   },
   "devDependencies": {
     "@types/react": "^18.0.26",
