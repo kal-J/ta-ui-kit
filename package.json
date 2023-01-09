@@ -2,9 +2,21 @@
   "name": "ta-ui-kit",
   "version": "0.0.2-0",
   "description": "True African UI kit",
-  "main": "index.js",
+  "type": "module",
+  "files": ["dist"],
+  "main": "./dist/ta-ui-kit.umd.cjs",
+  "module": "./dist/ta-ui-kit.js",
+  "exports": {
+    ".": {
+      "import": "./dist/ta-ui-kit.js",
+      "require": "./dist/ta-ui-kit.umd.cjs"
+    }
+  },
   "scripts": {
-    "test": "echo \"no test specified\" "
+    "test": "echo \"no test specified\" ",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "repository": {
     "type": "git",
@@ -21,6 +33,17 @@
   },
   "homepage": "https://github.com/kal-J/ta-ui-kit#readme",
   "dependencies": {
-    "np": "^7.6.3"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.26",
+    "@types/react-dom": "^18.0.9",
+    "@vitejs/plugin-react": "^3.0.0",
+    "autoprefixer": "^10.4.13",
+    "np": "^7.6.3",
+    "postcss": "^8.4.21",
+    "tailwindcss": "^3.2.4",
+    "vite": "^4.0.0"
   }
 }
