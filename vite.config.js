@@ -8,7 +8,12 @@ export default defineConfig({
   build: {
     lib: {
       // Could also be a dictionary or array of multiple entry points
-      entry: resolve(__dirname, 'src/lib/index.js'),
+      //entry: resolve(__dirname, 'src/lib/index.js'),
+      entry: {
+        vue: resolve(__dirname, 'src/lib/vue/index.js'),
+        react: resolve(__dirname, 'src/lib/react/index.js'),
+      },
+      //formats: ["es", "cjs"],
       name: 'ta-ui-kit',
       // the proper extensions will be added
       fileName: 'ta-ui-kit',

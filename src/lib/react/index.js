@@ -1,5 +1,3 @@
 import SideBar from "../components/SideBar";
 
-export default {
-  SideBar: SideBar,
-};
+export default SideBar;

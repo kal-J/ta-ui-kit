@@ -1,7 +1,7 @@
 import vue from "./vue";
 import react from "./react";
 
-export default {
+export {
   vue,
   react,
 };
