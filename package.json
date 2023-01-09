@@ -7,11 +7,19 @@
     "dist"
   ],
   "main": "./dist/ta-ui-kit.umd.cjs",
-  "module": "./dist/ta-ui-kit.js",
+  "module": "./dist/ta-ui-kit.mjs",
   "exports": {
     ".": {
-      "import": "./dist/ta-ui-kit.js",
+      "import": "./dist/ta-ui-kit.mjs",
       "require": "./dist/ta-ui-kit.umd.cjs"
+    },
+    "./vue": {
+      "import": "./dist/ta-ui-kit-vue.mjs",
+      "require": "./dist/ta-ui-kit-vue.umd.cjs"
+    },
+    "./react": {
+      "import": "./dist/ta-ui-kit-react.mjs",
+      "require": "./dist/ta-ui-kit-react.umd.cjs"
     }
   },
   "scripts": {
