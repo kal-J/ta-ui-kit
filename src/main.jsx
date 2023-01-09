@@ -10,4 +10,4 @@ import "./index.css";
   </React.StrictMode>,
 ) */
 
-export { SideBar };
+export default { SideBar };
