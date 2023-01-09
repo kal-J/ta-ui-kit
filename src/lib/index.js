@@ -1,5 +1,5 @@
-import vue from "./vue";
-import react from "./react";
+import * as vue from "./vue";
+import * as react from "./react";
 
 export {
   vue,
