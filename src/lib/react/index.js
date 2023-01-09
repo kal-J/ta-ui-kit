@@ -1,3 +1,3 @@
 import SideBar from "../components/SideBar";
 
-export { SideBar };
+export const SideBar = SideBar;
