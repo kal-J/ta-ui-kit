@@ -21,6 +21,10 @@
       "import": "./dist/ta-ui-kit-react.esm.js",
       "require": "./dist/ta-ui-kit-react.cjs"
     },
+    "./theme": {
+      "import": "./dist/ta-ui-kit-theme.esm.js",
+      "require": "./dist/ta-ui-kit-theme.cjs"
+    },
     "./style.css": {
       "import": "./dist/style.css",
       "require": "./dist/style.css"
