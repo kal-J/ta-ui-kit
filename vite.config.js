@@ -14,7 +14,7 @@ export default defineConfig({
         'ta-ui-kit': resolve(__dirname, 'src/lib/index.js'),
         'ta-ui-kit-vue': resolve(__dirname, 'src/lib/vue/index.js'),
         'ta-ui-kit-react': resolve(__dirname, 'src/lib/react/index.js'),
-        'ta-ui-kit-theme': resolve(__dirname, 'src/lib/theme/index.cjs'),
+        'ta-ui-kit-theme': resolve(__dirname, 'src/lib/theme/index.js'),
       },
       formats: ["esm", "cjs"],
       //name: 'ta-ui-kit',
