@@ -1,6 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-const req = require('require-esm-in-cjs');
-const customTheme = req('./src/lib/theme/index.js');
+const customTheme = require('./src/lib/theme/theme.cjs');
 
 module.exports = {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
