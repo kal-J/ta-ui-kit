@@ -1,5 +1,5 @@
 import * as vue from "./vue";
 import * as react from "./react";
-import * as theme from "./theme";
+import theme from "./theme/index";
 
 export { vue, react, theme };

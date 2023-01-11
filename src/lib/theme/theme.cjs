@@ -1,6 +1,9 @@
 // Extend default Tailwind Theme
-const defaultTheme = require("tailwindcss/defaultTheme");
-const defaultColors = require("tailwindcss/colors");
+//const defaultTheme = require("tailwindcss/defaultTheme");
+//const defaultColors = require("tailwindcss/colors");
+
+import defaultTheme from "tailwindcss/defaultTheme";
+import defaultColors from "tailwindcss/colors";
 
 const palette = {
   orange: defaultColors.orange,
@@ -39,4 +42,6 @@ const theme = {
   },
 };
 
-module.exports = theme;
+//module.exports = theme;
+
+export default theme;
