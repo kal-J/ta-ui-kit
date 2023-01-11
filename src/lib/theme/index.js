@@ -1,3 +1,3 @@
-import theme from "./theme.cjs";
+import theme from "./theme.mjs";
 
 export default theme;

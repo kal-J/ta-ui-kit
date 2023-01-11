@@ -1,6 +1,6 @@
 import SideBar from "./lib/components/SideBar";
 import { v4 as uuidv4 } from "uuid";
-import  theme from "./lib/theme";
+import  theme from "./lib/theme/index";
 
 const icons = {
   Customers: (
