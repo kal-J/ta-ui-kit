@@ -110,7 +110,7 @@ const Menus = [
 function App() {
   return (
     <div>
-      <SideBar Menus={Menus} icons={icons} />
+      <SideBar menus={Menus} icons={icons} />
     </div>
   );
 }

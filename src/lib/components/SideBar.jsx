@@ -169,10 +169,10 @@ const MenuItem = ({ subMenuItems = [], menuName, onClickHandler, icons }) => {
   );
 };
 
-export default ({Menus = [], icons = {}}) => {
+export default ({menus = [], icons = {}}) => {
   return (
     <nav className="flex flex-col space-y-sm">
-      {Menus?.map((menu) => {
+      {menus?.map((menu) => {
         return (
           <MenuItem
             key={uuidv4()}
