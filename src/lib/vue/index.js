@@ -1,4 +1,4 @@
-import { applyPureReactInVue } from "veaury";
-import ReactSideBar from "../components/SideBar";
+import SideBar from "../components/navigation/SideBar.vue";
+import '../../index.css';
 
-export const SideBar = applyPureReactInVue(ReactSideBar);
+export { SideBar };

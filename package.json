@@ -17,10 +17,6 @@
       "import": "./dist/ta-ui-kit-vue.esm.js",
       "require": "./dist/ta-ui-kit-vue.cjs"
     },
-    "./react": {
-      "import": "./dist/ta-ui-kit-react.esm.js",
-      "require": "./dist/ta-ui-kit-react.cjs"
-    },
     "./theme": {
       "import": "./dist/ta-ui-kit-theme.esm.js",
       "require": "./dist/ta-ui-kit-theme.cjs"
@@ -32,9 +28,10 @@
   },
   "scripts": {
     "test": "echo \"no test specified\" ",
-    "dev": "vite",
+    "dev": "vite --force",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
   },
   "repository": {
     "type": "git",
@@ -51,21 +48,24 @@
   },
   "homepage": "https://github.com/kal-J/ta-ui-kit#readme",
   "dependencies": {
-    "postcss-inline-base64": "^7.3.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "require-esm-in-cjs": "^0.1.0",
+    "feather-icons": "^4.29.0",
     "uuid": "^9.0.0",
-    "veaury": "^2.3.11"
+    "vue": "^3.2.45",
+    "vue-feather": "^2.0.0"
   },
   "devDependencies": {
-    "@types/react": "^18.0.26",
-    "@types/react-dom": "^18.0.9",
-    "@vitejs/plugin-react": "^3.0.0",
     "autoprefixer": "^10.4.13",
     "np": "^7.6.3",
     "postcss": "^8.4.21",
     "tailwindcss": "^3.2.4",
-    "vite": "^4.0.0"
+    "vite": "^4.0.0",
+    "@vitejs/plugin-vue": "^4.0.0",
+    "@rushstack/eslint-patch": "^1.1.0",
+    "@vitejs/plugin-vue-jsx": "^2.0.0",
+    "@vue/eslint-config-prettier": "^7.0.0",
+    "eslint": "^8.5.0",
+    "eslint-plugin-vue": "^9.0.0",
+    "prettier": "^2.5.1",
+    "vite-plugin-rewrite-all": "^1.0.0"
   }
 }
