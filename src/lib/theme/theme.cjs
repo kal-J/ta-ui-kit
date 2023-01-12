@@ -1,16 +1,16 @@
 // Extend default Tailwind Theme
 const defaultTheme = require("tailwindcss/defaultTheme");
-const defaultColors = require("tailwindcss/colors");
+const colors = require("tailwindcss/colors");
 
 const palette = {
-  orange: defaultColors.orange,
-  green: defaultColors.green,
-  red: defaultColors.red,
-  black: defaultColors.black,
-  white: defaultColors.white,
-  gray: defaultColors.gray,
+  orange: colors.orange,
+  green: colors.green,
+  red: colors.red,
+  black: colors.black,
+  white: colors.white,
+  gray: colors.gray,
 };
-const colors = {
+const themeColors = {
   background: palette.white,
   foreground: palette.black,
   primary: palette.orange,
@@ -21,6 +21,7 @@ const colors = {
 };
 
 const spacing = {
+  xs: "4px",
   sm: "8px",
   md: "16px",
   lg: "24px",
@@ -30,8 +31,8 @@ const spacing = {
 const theme = {
   ...defaultTheme,
   colors: {
-    ...defaultTheme.colors,
     ...colors,
+    ...themeColors,
   },
   spacing: {
     ...defaultTheme.spacing,

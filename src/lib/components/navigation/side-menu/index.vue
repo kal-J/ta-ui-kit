@@ -1,7 +1,7 @@
 
 <script setup>
-import IconsWithTitles from "./side-menu/IconsWithTitles.vue";
-import WithDropDownList from "./side-menu/WithDropDownList.vue";
+import IconsWithTitles from "./IconsWithTitles.vue";
+import WithDropDownList from "./WithDropDownList.vue";
 
 const props = defineProps(['menus',]);
 

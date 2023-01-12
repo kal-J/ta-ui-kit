@@ -16,8 +16,7 @@ export default defineConfig({
   },
   build: {
     lib: {
-      // Could also be a dictionary or array of multiple entry points
-      //entry: resolve(__dirname, 'src/lib/index.js'),
+      
       entry: {
         'ta-ui-kit': resolve(__dirname, 'src/lib/index.js'),
         'ta-ui-kit-vue': resolve(__dirname, 'src/lib/vue/index.js'),
@@ -26,9 +25,7 @@ export default defineConfig({
         //'style.css': resolve(__dirname, 'src/index.css'),
       },
       formats: ["esm", "cjs"],
-      //name: 'ta-ui-kit',
-      // the proper extensions will be added
-      //fileName: 'ta-ui-kit',
+      
     },
     rollupOptions: {
       // make sure to externalize deps that shouldn't be bundled

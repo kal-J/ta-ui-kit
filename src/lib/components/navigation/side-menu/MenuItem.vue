@@ -11,7 +11,7 @@ const props = defineProps(['subMenuItems', 'menuName', 'onClickHandler', 'icon']
     <a v-if="!props?.subMenuItems?.length" href="#"
         class="active:text-active hover:text-active flex items-center px-4 py-2 text-gray-700 bg-gray-100 rounded-lg"
         @click="props.onClickHandler">
-        <vue-feather v-if="props?.icon" :type="props?.icon"></vue-feather>
+        <vue-feather class="h-5 w-5 opacity-75" v-if="props?.icon" :type="props?.icon"></vue-feather>
 
         <span class="ml-3 text-sm font-medium">{{ props?.menuName }}</span>
     </a>
@@ -19,7 +19,7 @@ const props = defineProps(['subMenuItems', 'menuName', 'onClickHandler', 'icon']
     <details v-else class="group [&_summary::-webkit-details-marker]:hidden">
         <summary
             class="flex items-center px-4 py-2 text-gray-500 rounded-lg group hover:bg-gray-100 hover:text-active">
-            <vue-feather v-if="props?.icon" :type="props?.icon"></vue-feather>
+            <vue-feather class="h-5 w-5 opacity-75" v-if="props?.icon" :type="props?.icon"></vue-feather>
             <span @click="props.onClickHandler" class="ml-3 text-sm font-medium ">
                 {{ props?.menuName }}
             </span>
