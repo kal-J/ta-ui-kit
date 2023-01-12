@@ -13,7 +13,7 @@ const props = defineProps(['menus',]);
 
 <template>
 
-    <nav v-for="menu in props?.menus" class="hidden md:flex flex-col space-y-sm w-48 max-w-xs">
+    <nav v-for="menu in props?.menus" class="hidden md:flex flex-col space-y-sm w-full max-w-[250px]">
 
         <MenuItem :key="uuidv4()" :onClickHandler="menu.onClickHandler" :menuName="menu.name" :subMenuItems="menu.items"
             :icon="menu.icon" />

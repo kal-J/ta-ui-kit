@@ -70,6 +70,5 @@ const Menus = [
 
 
 <style>
-@import url('./assets/mint-africa.css');
 @import url('./index.css');
 </style> 
