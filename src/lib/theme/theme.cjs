@@ -18,6 +18,7 @@ const themeColors = {
   danger: palette.red,
   failure: palette.red,
   active: palette.green["700"],
+  "side-menu-bg": "#fbfbfb",
 };
 
 const spacing = {
@@ -26,6 +27,7 @@ const spacing = {
   md: "16px",
   lg: "24px",
   xl: "40px",
+  "side-menu-lg": "250px",
 };
 
 const theme = {
