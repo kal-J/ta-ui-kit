@@ -27,7 +27,7 @@ const spacing = {
   md: "16px",
   lg: "24px",
   xl: "40px",
-  "side-menu-lg": "250px",
+  "side-menu-lg": "100%",
 };
 
 const theme = {
