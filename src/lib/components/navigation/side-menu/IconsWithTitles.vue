@@ -21,7 +21,7 @@ console.log(props.menus)
                     
                     <ul v-for="menu in props.menus" class="space-y-sm border-gray-100 pt-xs">
                         <li class="py-2">
-                            <a href="" @click=" (e) => { e.preventDefault(); menu?.onClickHandler;}"
+                            <a href="" @click="menu?.onClickHandler"
                                 class="group relative flex justify-center rounded px-2 py-1.5 text-gray-500 hover:bg-gray-50 ">
                                 <vue-feather class="h-5 w-5 opacity-75 hover:text-active" v-if="menu?.icon"
                                     :type="menu?.icon"></vue-feather>
