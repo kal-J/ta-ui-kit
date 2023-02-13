@@ -52,6 +52,45 @@ const Menus = [
   },
   {
     id: uuidv4(),
+    name: "SMS2",
+    active: false,
+    onClickHandler: () => { },
+    items: [
+      {
+        id: uuidv4(),
+        name: "Compose",
+        active: false,
+        onClickHandler: () => { },
+      },
+      {
+        id: uuidv4(),
+        name: "Inbox",
+        active: false,
+        onClickHandler: () => { },
+      },
+      {
+        id: uuidv4(),
+        name: "OutBox",
+        active: false,
+        onClickHandler: () => { },
+      },
+      {
+        id: uuidv4(),
+        name: "Templates",
+        active: false,
+        onClickHandler: () => { },
+      },
+      {
+        id: uuidv4(),
+        name: "Keywords",
+        active: false,
+        onClickHandler: () => { },
+      },
+    ],
+    icon: "send",
+  },
+  {
+    id: uuidv4(),
     name: "Settings",
     active: false,
     onClickHandler: () => { },
@@ -63,8 +102,11 @@ const Menus = [
 </script>
 
 <template>
-  <div class="w-full">
+  <div class="w-full flex">
     <SideMenu :menus="Menus" />
+    <div class="w-full bg-slate-400 h-100">
+      <h1>Gotcha</h1>
+    </div>
   </div>
 </template>
 
