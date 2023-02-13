@@ -63,7 +63,7 @@ const Menus = [
 </script>
 
 <template>
-  <div>
+  <div class="w-full">
     <SideMenu :menus="Menus" />
   </div>
 </template>
