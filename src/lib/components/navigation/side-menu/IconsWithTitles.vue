@@ -14,13 +14,7 @@ const handleMenuClick = (e, menu) => {
     activeMenu.value = menu.name;
 }
 
-watchEffect(() => {
-    document.getElementById(activeMenu.value)?.focus();
-})
 
-const log = (message) => {
-    console.log(message);
-}
 
 </script>
 
