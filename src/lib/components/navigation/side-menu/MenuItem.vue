@@ -9,7 +9,7 @@ const props = defineProps(['subMenuItems', 'menuName', 'onClickHandler', 'icon']
 <template>
 
     <a v-if="!props?.subMenuItems?.length" href="#"
-        class="active:text-active hover:text-active flex items-center px-4 py-2 text-gray-700 bg-gray-100 rounded-lg"
+        class="active:text-active hover:text-active flex items-center px-4 py-2 text-gray-700"
         @click="props.onClickHandler">
         <vue-feather class="h-5 w-5 opacity-75" v-if="props?.icon" :type="props?.icon"></vue-feather>
 

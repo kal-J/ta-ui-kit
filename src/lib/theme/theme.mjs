@@ -42,5 +42,5 @@ const theme = {
   },
 };
 
-console.log(theme.colors);
+// console.log(theme.colors);
 export default theme;

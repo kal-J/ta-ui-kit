@@ -102,11 +102,12 @@ const Menus = [
 </script>
 
 <template>
-  <div class="w-full flex">
-    <SideMenu :menus="Menus" />
-    <div class="w-full bg-slate-400 h-100">
-      <h1>Gotcha</h1>
+  <div class="w-full">
+    <div class="w-64 h-full">
+      <SideMenu :menus="Menus" />
     </div>
+
+
   </div>
 </template>
 
