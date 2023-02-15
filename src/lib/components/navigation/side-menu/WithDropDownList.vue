@@ -12,7 +12,7 @@ const props = defineProps(['menus',]);
     <nav v-for="menu in props?.menus" class="hidden md:flex flex-col space-y-sm w-side-menu-lg max-w-side-menu-lg bg-side-menu-bg">
 
         <MenuItem :key="uuidv4()" :onClickHandler="menu.onClickHandler" :menuName="menu.name" :subMenuItems="menu.items"
-            :icon="menu.icon" />
+            :icon="menu.icon" :menu="menu" />
     </nav>
 
 </template>

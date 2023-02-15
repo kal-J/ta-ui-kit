@@ -35,7 +35,9 @@ const handleMenuClick = (e, menu) => {
                             <a :tabindex="index" 
                             href="" @click="(e) => { handleMenuClick(e, menu) }"
                                 class="group relative flex justify-center rounded px-2 py-1.5 text-gray-500 hover:bg-gray-50 active:bg-gray-50">
-                                <vue-feather class="h-5 w-5 opacity-75 hover:text-active active:text-active"
+                                <vue-feather 
+                                class="h-5 w-5 opacity-75 hover:text-active active:text-active"
+                                :class="menu?.active ? 'text-active' : ''"
                                     v-if="menu?.icon" :type="menu?.icon"></vue-feather>
 
                                 <span 
@@ -45,7 +47,9 @@ const handleMenuClick = (e, menu) => {
                                     <nav v-for="item in menu?.items" class="flex flex-col space-y-4">
 
                                         <a @click="item.onClickHandler" :key="item?.id || uuidv4()" href="#"
-                                            class="flex items-center border-l-[3px] border-green-500  px-4 py-3 hover:text-green-700  hover:bg-green-50 active:bg-green-50  active:text-green-700">
+                                            class="flex items-center border-l-[3px] border-green-500  px-4 py-3 hover:text-green-700  hover:bg-green-50 active:bg-green-50  active:text-green-700"
+                                            :class="item?.active ? 'text-active' : ''"
+                                            >
                                             <span class="ml-3 text-sm font-medium"> {{ item.name }} </span>
                                         </a>
                                     </nav>

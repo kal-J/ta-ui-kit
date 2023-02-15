@@ -2,7 +2,7 @@
 <script setup>
 import { v4 as uuidv4 } from "uuid";
 
-const props = defineProps(['subMenuItems', 'menuName', 'onClickHandler', 'icon']);
+const props = defineProps(['subMenuItems', 'menuName', 'onClickHandler', 'icon', 'menu']);
 
 </script>
 
@@ -10,6 +10,7 @@ const props = defineProps(['subMenuItems', 'menuName', 'onClickHandler', 'icon']
 
     <a v-if="!props?.subMenuItems?.length" href="#"
         class="active:text-active hover:text-active flex items-center px-4 py-2 text-gray-700"
+        :class="menu?.active ? 'text-active' : '' "
         @click="props.onClickHandler">
         <vue-feather class="h-5 w-5 opacity-75" v-if="props?.icon" :type="props?.icon"></vue-feather>
 
@@ -37,6 +38,7 @@ const props = defineProps(['subMenuItems', 'menuName', 'onClickHandler', 'icon']
 
             <a :key="item?.id || uuidv4()" href="#"
                 class="block px-4 py-2 text-sm font-medium text-gray-500 rounded-lg hover:bg-gray-100 hover:text-active"
+                :class="item?.active ? 'text-active' : '' "
                 @click="item.onClickHandler">
                 {{ item.name }}
             </a>
