@@ -41,11 +41,6 @@ const theme = {
     ...defaultTheme.spacing,
     ...spacing,
   },
-  screens: {
-    ...defaultTheme.screens,
-    'lg-side-menu': '1536px',
-    // => @media (min-width: 1536px) { ... }
-  },
 };
 
 module.exports = theme;
