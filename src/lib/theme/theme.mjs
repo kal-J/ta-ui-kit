@@ -13,7 +13,8 @@ const palette = {
 const themeColors = {
   background: palette.white,
   foreground: palette.black,
-  primary: palette.orange,
+  primary: palette.green,
+  secondary: palette.orange,
   success: palette.green,
   danger: palette.red,
   failure: palette.red,

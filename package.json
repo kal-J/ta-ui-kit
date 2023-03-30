@@ -51,7 +51,8 @@
     "feather-icons": "^4.29.0",
     "uuid": "^9.0.0",
     "vue": "^3.2.45",
-    "vue-feather": "^2.0.0"
+    "vue-feather": "^2.0.0",
+    "vue-fragment": "^1.6.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.13",

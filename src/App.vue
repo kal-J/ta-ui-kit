@@ -1,6 +1,7 @@
 <script setup>
 import { v4 as uuidv4 } from "uuid";
 import SideMenu from './lib/components/navigation/side-menu/index.vue';
+import VerticalMenu from './lib/components/navigation/vertical-menu/index.vue';
 
 const Menus = [
   {
@@ -99,12 +100,20 @@ const Menus = [
   },
 ];
 
+let logoutItem = {
+    id: uuidv4(),
+    name: "Logout",
+    active: false,
+    onClickHandler: () => { },
+    icon: "log-out",
+  };
+
 </script>
 
 <template>
-  <div class="w-full">
-    <div class="w-64 h-full">
-      <SideMenu :menus="Menus" />
+  <div class="w-full h-screen">
+    <div class="h-full">
+      <SideMenu :menus="Menus" :logout="logoutItem" />
     </div>
 
 
@@ -114,4 +123,10 @@ const Menus = [
 
 <style>
 @import url('./index.css');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+* {
+  font-family: 'Lato', sans-serif;
+  font-family: 'Roboto', sans-serif;
+}
 </style> 
