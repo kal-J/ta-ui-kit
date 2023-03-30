@@ -2,10 +2,12 @@
 import { v4 as uuidv4 } from "uuid";
 import { ref, watchEffect } from "vue";
 
-const props = defineProps(["menus"]);
+const props = defineProps(["menus", "breakPoint"]);
 console.log(props.menus);
 
 const activeMenu = ref("");
+
+const breakPoint = props?.breakPoint || "lg-side-menu";
 
 const handleMenuClick = (e, menu) => {
   e.preventDefault();
@@ -16,11 +18,14 @@ const handleMenuClick = (e, menu) => {
 
 <template>
   <div
-    class="flex h-screen w-16 flex-col justify-between border-r bg-white md:hidden"
+    :class="`flex h-screen w-16 flex-col justify-between border-r bg-white ${breakPoint}:hidden`"
   >
     <div>
       <div class="inline-flex h-16 w-16 items-center justify-center">
-        <span class="block h-10 w-10 rounded-lg bg-gray-200"></span>
+        <span
+          class="flex justify-center items-center text-gray-500 h-10 w-10 rounded-lg bg-gray-200"
+          >M</span
+        >
       </div>
 
       <div class="border-t border-gray-100">
@@ -29,7 +34,7 @@ const handleMenuClick = (e, menu) => {
             v-for="(menu, index) in props.menus"
             class="space-y-sm border-gray-100 pt-xs"
           >
-            <li class="py-2">
+            <li :title="menu.name" class="py-2">
               <a
                 :tabindex="index"
                 href=""
@@ -48,8 +53,13 @@ const handleMenuClick = (e, menu) => {
                 ></vue-feather>
 
                 <span
+                  v-click-away="
+                    () => {
+                      activeMenu = '';
+                    }
+                  "
                   v-if="menu?.items?.length && activeMenu == menu.name"
-                  class="absolute left-full top-0 ml-2 px-2 py-1.5 font-medium opacity-0 z-[500] group-hover:opacity-100 group-active:opacity-100 group-hover:bg-gray-50 group-active:bg-gray-50 hover:bg-gray-50 active:bg-gray-50 w-40 group-active:block group-hover:block hidden"
+                  class="absolute border left-full top-0 ml-2 px-2 py-1.5 font-medium opacity-100 z-[500] group-hover:opacity-100 group-active:opacity-100 group-hover:bg-gray-50 group-active:bg-gray-50 hover:bg-gray-50 active:bg-gray-50 w-40 group-active:block group-hover:block"
                   :class="activeMenu == menu.name ? '' : 'hidden'"
                 >
                   <nav
