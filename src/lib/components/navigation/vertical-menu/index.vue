@@ -1,11 +1,15 @@
 <script setup>
 import { v4 as uuidv4 } from "uuid";
+import IconsWithTitles from "../side-menu/IconsWithTitles.vue";
 
 const props = defineProps(["menus", "logout"]);
 </script>
 
 <template>
-  <div class="relative h-full w-60 bg-gray-100 overflow-y-auto">
+
+  <div
+    class="relative hidden md:block h-full w-60 bg-gray-100 overflow-y-auto transition-all duration-1000"
+  >
     <div class="h-16 px-6"></div>
 
     <div class="text-xs py-4 px-6 uppercase font-light">Your Account</div>
@@ -14,7 +18,7 @@ const props = defineProps(["menus", "logout"]);
       <div
         @click="() => menu.onClickHandler()"
         v-if="menu.active"
-        class="bg-white flex space-x-4 cursor-pointer my-1"
+        class="bg-white flex space-x-4 cursor-pointer my-1 border-r"
       >
         <span class="h-16 w-2 bg-primary-600"></span>
         <div class="h-16 flex items-center space-x-4 text-primary-600">
@@ -55,19 +59,23 @@ const props = defineProps(["menus", "logout"]);
         </div>
       </div>
 
-      <ul
-        v-if="menu.active"
-        v-for="item in menu?.items"
-        class="w-full text-sm pl-16 py-4 bg-white"
+      <div
+        class="relative top-0 transition-all duration-700 -translate-y-32"
+        :class="menu.active ? 'h-auto translate-y-0' : 'overflow-hidden h-0'"
       >
-        <li
-          @click="() => item.onClickHandler()"
-          class="cursor-pointer"
-          :class="item.active ? 'text-green-700' : ''"
+        <ul
+          v-for="item in menu?.items"
+          class="w-full text-sm pl-16 py-4 bg-white border-r"
         >
-          {{ item.name }}
-        </li>
-      </ul>
+          <li
+            @click="() => item.onClickHandler()"
+            class="cursor-pointer"
+            :class="item.active ? 'text-green-700' : ''"
+          >
+            {{ item.name }}
+          </li>
+        </ul>
+      </div>
     </template>
     <div class="h-20 w-full"></div>
 
@@ -97,6 +105,9 @@ const props = defineProps(["menus", "logout"]);
       </div>
     </div> -->
   </div>
+
+  <IconsWithTitles :menus="props.menus" />
+
 </template>
 
-<style></style>
+

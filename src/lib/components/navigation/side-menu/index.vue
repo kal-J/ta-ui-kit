@@ -3,14 +3,14 @@
 import IconsWithTitles from "./IconsWithTitles.vue";
 import WithDropDownList from "./WithDropDownList.vue";
 
-const props = defineProps(['menus', 'breakPoint']);
+const props = defineProps(['menus', ]);
 
 </script>
 
 <template>
 
-    <IconsWithTitles :menus="props.menus" :breakPoint="props.breakPoint" />
-    <WithDropDownList :menus="props.menus" :breakPoint="props.breakPoint" />
+    <IconsWithTitles :menus="props.menus" />
+    <WithDropDownList :menus="props.menus" />
 
 
 </template>
