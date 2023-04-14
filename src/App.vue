@@ -3,6 +3,7 @@ import {ref} from 'vue';
 import { v4 as uuidv4 } from "uuid";
 import SideMenu from './lib/components/navigation/side-menu/index.vue';
 import VerticalMenu from './lib/components/navigation/vertical-menu/index.vue';
+import Pagination from "./lib/components/pagnition/Pagination.vue"
 
 const activeMenu = ref("SMS");
 const activeSubMenu = ref();
@@ -382,8 +383,11 @@ let logoutItem = {
 
 <template>
   <div class="w-full h-screen">
-    <div class="h-full">
+    <div class="h-full flex justify-between">
       <VerticalMenu :menus="Menus" />
+      <div class="w-full h-screen p-4 relative">
+        <Pagination position="fixed" :pageHandler="(page) => {}" />
+      </div>
     </div>
 
 
